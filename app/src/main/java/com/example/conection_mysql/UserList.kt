@@ -11,6 +11,7 @@ class UserList(private val context: Activity, internal var UserData: List<UserDa
 
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+
         val inflater = context.layoutInflater
         val listViewItem = inflater.inflate(R.layout.user_layout, null, true)
 
@@ -18,12 +19,19 @@ class UserList(private val context: Activity, internal var UserData: List<UserDa
         val txEmail = listViewItem.findViewById(R.id.textViewUseremailID) as TextView
         val txFone = listViewItem.findViewById(R.id.textViewUserfoneID) as TextView
 
+
         val myUser = UserData[position]
-        txNome.text = myUser.nome
-        txEmail.text = myUser.email
-        txFone.text = myUser.telefone
+        // Coloquei para pegar com o ID
+
+        txNome.text = "Nome: " + myUser.nome
+        txEmail.text = "Email: " + myUser.email
+        txFone.text = "Telefone: "+ myUser.telefone
+
+
+
 
         return listViewItem
+
 
     }
 }

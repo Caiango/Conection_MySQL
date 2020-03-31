@@ -1,3 +1,3 @@
 package com.example.conection_mysql
 
-class UserData (val nome: String, val email: String, val telefone: String)
+class UserData (val id : Int?, val nome: String, val email: String, val telefone: String)
